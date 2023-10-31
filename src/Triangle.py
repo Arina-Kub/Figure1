@@ -12,6 +12,9 @@ class Triangle(Figure):
         self.b = b
         self.c = c
 
+    def is_valid(self, a, b, c):
+        return (a + b > c) and (a + c > b) and (b + c > a)
+
     def area(self):
         s = (self.a + self.b + self.c) / 2
         return s * (s - self.a) * (s - self.b) * (s - self.c) ** 0.5
